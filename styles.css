@@ -1,0 +1,143 @@
+/* GENERAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* BODY STYLING */
+  body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: #f0f0f0; /* Light background, can be changed */
+    color: #333;
+  }
+  
+  /* HEADER / NAV BAR */
+  header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  /* Make nav items stack vertically and center them */
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* LOGO */
+  .logo {
+    height: 80px;   /* Increase/decrease as needed */
+    width: auto;
+    background: transparent; /* Ensure transparency if the PNG has a transparent background */
+    margin-bottom: 10px;
+  }
+  
+  /* LOGO TEXT: you can style each element as needed */
+  .logo-text {
+    text-align: center; /* Center the text under the logo */
+    color: #900;        /* Example color, replace with your brand color */
+  }
+  .logo-text h1 {
+    font-size: 1.6rem;  /* Adjust font size as needed */
+    margin-bottom: 5px;
+  }
+  .logo-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #444;
+  }
+  .logo-text p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* MAIN TITLE */
+  .title {
+    text-align: center;
+    margin: 30px 0 10px;
+    font-size: 2rem;
+  }
+  
+  /* GALLERY SECTION */
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* PLANT CARDS */
+  .plant {
+    background: #fff;
+    margin: 15px;
+    width: 280px;  /* Static width for a clean grid; adjust as needed */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    perspective: 1000px; 
+  }
+  
+  /* Plant links fill entire card area */
+  .plant a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+  }
+  
+  /* PLANT IMAGE */
+  .plant img {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    transition: transform 0.6s ease;
+    transform: rotateY(0deg);
+    cursor: pointer;
+  }
+  
+  /* PLANT NAME */
+  .plant-name {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #444;
+    transition: color 0.3s ease;
+  }
+  
+  /* HOVER EFFECT */
+  .plant:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+  
+  .plant:hover img {
+    transform: rotateY(15deg) scale(1.05);
+  }
+  
+  .plant:hover .plant-name {
+    color: #4CAF50; /* Example hover color, change as needed */
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 768px) {
+    .plant {
+      width: 45%;
+      margin: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .plant {
+      width: 90%;
+      margin: 10px auto;
+    }
+  }
+  
